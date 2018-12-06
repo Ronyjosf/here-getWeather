@@ -53,6 +53,8 @@ public class weather {
     }
 
     public static JSONObject getJsonObjFromFile(String file, String searchString) throws IOException, ParseException {
+        // parse json file, with array (JSONArray) of JSONObjects.
+        // json object has the format of {key:value, key:value}
         JSONParser parser = new JSONParser();
         JSONArray jsonarray = (JSONArray) parser.parse(new FileReader(file));
 
