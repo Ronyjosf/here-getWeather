@@ -121,6 +121,7 @@ public class weather {
 
 
         for (String thecity : cities) {
+            // import json file in current directory into an object. json is in the fortmat of id, city
             jsonObject = getJsonObjFromFile(System.getProperty("user.dir")+"/city.list.json",thecity);
             if (jsonObject !=null){
                 System.out.println("name = " + thecity+ ", city id = " + jsonObject.get("id").toString());
